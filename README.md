@@ -2,12 +2,6 @@
 
 A simulated **IoT smart-irrigation network** for a farm, built in **Cisco Packet Tracer**. Wireless and wired sensors report water level, temperature and humidity to an IoT server. Rules on the server switch five sprinklers on and off automatically. Farmers can watch and control everything from a PC or smartphone at the office or at home, over a simulated WAN and cellular link.
 
-> Group project for **SAIAH 1163 Computer Systems and Networks**, Bachelor in Artificial Intelligence, Universiti Teknologi Malaysia (Semester 2, 2024/2025).
-
-<p align="center">
-  <img src="assets/network_topology.png" alt="Packet Tracer topology: field with sensors and sprinklers, office with servers, and home with PCs, smartphones and a cell tower" width="900">
-</p>
-
 ---
 
 ## Problem
@@ -85,8 +79,6 @@ In Simulation mode, an HTTP request from PC1 to the IoT server was traced throug
 
 The server de-encapsulates the frame layer by layer and sends the HTTP response back down the same stack.
 
-<p align="center"><img src="assets/pdu_simulation.png" alt="Packet Tracer PDU information at Server IoT showing layers 1 to 7" width="480"></p>
-
 ## Running the simulation
 
 1. Install **Cisco Packet Tracer** (free with a Cisco Networking Academy account).
@@ -94,16 +86,6 @@ The server de-encapsulates the frame layer by layer and sends the HTTP response 
 3. On any PC or smartphone, open **Desktop → IoT Monitor** and log in to the IoT server at `10.20.30.253`. The simulation's demo password is `plantelligent`.
 4. Watch the sprinklers react as MCU 1 cycles the temperature.
 5. Switch to **Simulation** mode to step through packets, as in the result above.
-
-## AI extensions (future work)
-
-The current controller uses fixed thresholds. Next steps from an AI point of view:
-
-- **Predictive analytics:** use regression or decision trees to forecast moisture, temperature and humidity, so irrigation can be scheduled ahead of time.
-- **Adaptive control:** replace fixed thresholds with fuzzy logic or reinforcement learning.
-- **Anomaly detection:** flag sudden sensor drops or outliers that may mean hardware faults.
-- **Crop health from images:** use CNNs on drone or camera images to spot disease, pests or drought stress.
-- **Field segmentation:** cluster zones by moisture needs (for example with k-means).
 
 ## Project structure
 
@@ -115,21 +97,4 @@ The current controller uses fixed thresholds. Next steps from an AI point of vie
 ├── docs/
 │   └── presentation.pdf                    # project slides
 └── assets/                                 # images used in this README
-```
-
-## My contribution
-
-I was responsible for the **network model**: the topology design, device configuration, and the MCU and IoT automation logic.
-
-## Team (Group 4)
-
-**Jessie Moh Ngiik Jun** · Aryl bin Zulkiflee · Muhammad Zarul Hazman bin Abd Halim · Wafa Wan
-
-Lecturer: Dr. Mohd Azri bin Mohd Izhar
-
-## References
-
-- IBM (2023). *What is the Internet of Things (IoT)?*
-- Hamadani, H. et al. (2021). *Traditional Farming Practices and Its Consequences.* Microbiota and Biofertilizers, Vol. 2, 119–128.
-- Hoffman, M. (2025). *How much should I water my vegetable garden.* The Tree Trove.
-- Mouha, R. A. (2021). *Internet of Things (IoT).* Journal of Data Analysis and Information Processing, 9(2), 77–101.
+``
